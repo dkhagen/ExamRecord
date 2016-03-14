@@ -1,13 +1,17 @@
 package caduceuslabs.examrecord;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
@@ -19,6 +23,8 @@ public class MainPage extends AppCompatActivity {
 
     private ListView todaysAppts;
     private String[][] testData = new String[][] {{"David Hagen","12:30"}, {"John Smith","1:30"}};
+    //private Context mContext = getApplicationContext();
+    private String TAG = "Testing";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +32,19 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-        // TODO: create custom adapter from example online for formatting
+        // DONE: create custom adapter from example online for formatting
         // http://www.vogella.com/tutorials/AndroidListView/article.html
         todaysAppts = (ListView)findViewById(R.id.todaysAppts);
         AppointmentAdapter appointmentAdapter = new AppointmentAdapter(this,testData);
         todaysAppts.setAdapter(appointmentAdapter);
+        todaysAppts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d(TAG,"on click");
+                Intent intent = new Intent(getApplicationContext(),PatientView.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
