@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class MainPage extends AppCompatActivity {
 
     private ListView todaysAppts;
-    private String[] testData = new String[] {"David Hagen", "John Smith"};
+    private String[][] testData = new String[][] {{"David Hagen","12:30"}, {"John Smith","1:30"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +35,11 @@ public class MainPage extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+        // TODO: create custom adapter from example online for formatting
+        // http://www.vogella.com/tutorials/AndroidListView/article.html
         todaysAppts = (ListView)findViewById(R.id.todaysAppts);
-        ArrayList<String> testList = new ArrayList<String>();
-        testList.add(testData[0]);
-        testList.add(testData[1]);
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.simple_list_item, testList);
-        todaysAppts.setAdapter(adapter); // TODO: create custom adapter from example online for formatting
+        AppointmentAdapter appointmentAdapter = new AppointmentAdapter(this,testData);
+        todaysAppts.setAdapter(appointmentAdapter);
     }
 
     @Override
