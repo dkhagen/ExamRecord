@@ -42,6 +42,7 @@ public class MainPage extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(TAG,"on click");
                 Intent intent = new Intent(getApplicationContext(),PatientView.class);
+                intent.putExtra("patientName","David Hagen");
                 startActivity(intent);
             }
         });
