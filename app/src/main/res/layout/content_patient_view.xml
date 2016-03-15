@@ -12,4 +12,24 @@
     tools:context="caduceuslabs.examrecord.PatientView"
     tools:showIn="@layout/activity_patient_view">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/patient_image"
+        android:src="@drawable/david_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Patient Name"
+        android:id="@+id/patient_name"
+        android:layout_below="@+id/patient_image"
+        android:layout_toRightOf="@+id/patient_image"
+        android:layout_toEndOf="@+id/patient_image"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
 </RelativeLayout>
