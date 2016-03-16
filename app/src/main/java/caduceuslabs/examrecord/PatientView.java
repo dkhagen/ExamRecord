@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +18,8 @@ public class PatientView extends AppCompatActivity {
 
     private ImageView patient_image;
     private TextView patient_name;
+    private Button start_exam_button;
+    private Button previous_records_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +29,25 @@ public class PatientView extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         patient_image = (ImageView)findViewById(R.id.patient_image);
+        // set patient's picture if applicable
         patient_name = (TextView)findViewById(R.id.patient_name);
         patient_name.setText(parentIntent.getStringExtra("patientName"));
+        start_exam_button = (Button)findViewById(R.id.start_exam_button);
+        start_exam_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ExamActivity.class);
+                intent.putExtra("patientName","David Hagen");
+                startActivity(intent);
+            }
+        });
+        previous_records_button = (Button)findViewById(R.id.previous_records_button);
+        previous_records_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // fill in intent
+            }
+        });
     }
 
     @Override
