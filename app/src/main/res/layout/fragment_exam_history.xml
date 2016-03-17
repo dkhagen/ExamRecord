@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/basic_info"
-        android:text="History"/>
+        android:text="History"
+        android:layout_marginTop="10dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -32,82 +33,98 @@
                 android:text="ROS:"
                 android:id="@+id/ros" />
 
-            <CheckBox
+            <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONSTITUTIONAL"
-                android:id="@+id/constitutional_check_box"
-                android:checked="false" />
+                android:id="@+id/scrollView">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HEME/LYMPH"
-                android:id="@+id/heme_lymph_check_box"
-                android:checked="false" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ENDO-IDDM/NIDDM"
-                android:id="@+id/endo_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONSTITUTIONAL"
+                        android:id="@+id/constitutional_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SKIN/BREAST"
-                android:id="@+id/skin_breast_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HEME/LYMPH"
+                        android:id="@+id/heme_lymph_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EYES"
-                android:id="@+id/eyes_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENDO-IDDM/NIDDM"
+                        android:id="@+id/endo_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ENT"
-                android:id="@+id/ent_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SKIN/BREAST"
+                        android:id="@+id/skin_breast_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CARD/VASC"
-                android:id="@+id/card_vasc_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EYES"
+                        android:id="@+id/eyes_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RESP"
-                android:id="@+id/resp_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENT"
+                        android:id="@+id/ent_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GU"
-                android:id="@+id/gu_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CARD/VASC"
+                        android:id="@+id/card_vasc_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MUSCULO"
-                android:id="@+id/musculo_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RESP"
+                        android:id="@+id/resp_check_box"
+                        android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="NEURO/PSYCH"
-                android:id="@+id/neuro_psych_check_box"
-                android:checked="false" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GU"
+                        android:id="@+id/gu_check_box"
+                        android:checked="false" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MUSCULO"
+                        android:id="@+id/musculo_check_box"
+                        android:checked="false" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEURO/PSYCH"
+                        android:id="@+id/neuro_psych_check_box"
+                        android:checked="false" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
         </LinearLayout>
 
         <LinearLayout
