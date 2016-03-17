@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical">
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/fragment1"
-        android:name="caduceuslabs.examrecord.ExamActivityFragment"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout="@layout/fragment_exam_basic_info" />
+        android:id="@+id/fragment_container"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -23,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:checked="true"
             android:id="@+id/radioButton" />
 
         <RadioButton

@@ -12,27 +12,45 @@
     tools:context="caduceuslabs.examrecord.MainPage"
     tools:showIn="@layout/activity_main_page">
 
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/zalucki"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome Dr. Zalucki."
+        android:text="Welcome, Dr. Zalucki."
         android:id="@+id/welcome"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginBottom="21dp"
+        android:textColor="#000000" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="2"
-        android:layout_below="@+id/welcome"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="10dp">
 
         <ListView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/todaysAppts" />
+            android:id="@+id/todaysAppts"
+            android:paddingRight="20dp" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -44,13 +62,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
-                android:text="Search for Patient" />
+                android:hint="Search for Patient"
+                android:textAlignment="center"
+                android:textSize="24dp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button" />
+                android:text="Search"
+                android:id="@+id/search_button"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
     </LinearLayout>
 

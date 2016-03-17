@@ -29,9 +29,7 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.content_main_page);
         // DONE: create custom adapter from example online for formatting
         // http://www.vogella.com/tutorials/AndroidListView/article.html
         todaysAppts = (ListView)findViewById(R.id.todaysAppts);
