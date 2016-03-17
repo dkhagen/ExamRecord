@@ -47,7 +47,8 @@
         android:src="@drawable/technology"
         android:layout_alignTop="@+id/email_button"
         android:layout_toLeftOf="@+id/email_button"
-        android:layout_toStartOf="@+id/email_button" />
+        android:layout_toStartOf="@+id/email_button"
+        android:layout_marginRight="20dp" />
 
     <Button
         android:layout_width="wrap_content"
