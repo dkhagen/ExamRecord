@@ -14,21 +14,21 @@ import android.app.Fragment;
 
 public class ExamActivity extends AppCompatActivity {
 
-    private RadioGroup navigation;
-    private int checkedButton;
-    private View fragment;
+    //private RadioGroup navigation;
+    //private int checkedButton;
+    //private View fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_exam);
-        navigation = (RadioGroup)findViewById(R.id.navigation_radio_group);
-        final FragmentManager fragmentManager = getFragmentManager();
-        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        BasicInfoFragment basicInfoFragment = new BasicInfoFragment();
-        fragmentTransaction.add(R.id.fragment_container,basicInfoFragment);
-        fragmentTransaction.commit();
-        navigation.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        //navigation = (RadioGroup)findViewById(R.id.navigation_radio_group);
+        //final FragmentManager fragmentManager = getFragmentManager();
+        //final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //BasicInfoFragment basicInfoFragment = new BasicInfoFragment();
+        //fragmentTransaction.add(R.id.fragment_container,basicInfoFragment);
+        //fragmentTransaction.commit();
+        /*navigation.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 Log.d("test","check has changed");
@@ -41,7 +41,7 @@ public class ExamActivity extends AppCompatActivity {
                     transaction.commit();
                 }
             }
-        });
+        });*/
     }
 
 }
